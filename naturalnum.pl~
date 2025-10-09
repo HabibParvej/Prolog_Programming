@@ -1,0 +1,7 @@
+natural(N):-N>0,write(N),
+    N1 is N-1,natural(N1).
+natural(0):-write('').
+
+natural2(M,N):-M<N,write(M), M1 is M+1,natural2(M1,N).
+natural2(M,N):-M>N,write(M),N1 is M-1,natural2(N1,N).
+natural2(M,N):-M is N,write(N).
